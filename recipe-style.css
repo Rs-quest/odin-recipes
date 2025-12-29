@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: repeating-linear-gradient(
+        90deg,
+        #a8d5e2,
+        #a8d5e2 15px,
+        #fff 15px,
+        #fff 30px
+    );
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.recipe-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.recipe-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-decoration: none;
+    color: #7f8c8d;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #2c3e50;
+}
+
+.recipe-header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.recipe-subtitle {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 1.1em;
+}
+
+/* Recipe Content */
+.recipe-image {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.recipe-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.info-box {
+    text-align: center;
+}
+
+.info-box h3 {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.info-box p {
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+/* Sections */
+.ingredients-section,
+.instructions-section {
+    margin-bottom: 40px;
+}
+
+.ingredients-section h2,
+.instructions-section h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 400;
+    border-bottom: 2px solid #a8d5e2;
+    padding-bottom: 10px;
+}
+
+.ingredients-section ul,
+.instructions-section ol {
+    padding-left: 30px;
+    line-height: 2;
+}
+
+.ingredients-section li,
+.instructions-section li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recipe-container {
+        padding: 20px;
+    }
+
+    .recipe-header h1 {
+        font-size: 2em;
+    }
+
+    .recipe-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .back-button {
+        position: static;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
